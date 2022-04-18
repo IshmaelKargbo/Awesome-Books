@@ -3,7 +3,7 @@
 Awesome books is a simple website that displays a list of books and allows you to add and remove books from that list.
 
 #### Desktop Screenshot
-<img src="./assets/images/app_screenshot.png" alt="Code 4 Easy" />
+<img src="./assets/images/app_screenshot.png" alt="Awesome Books" />
 
 ## Built With
 
@@ -12,10 +12,10 @@ Awesome books is a simple website that displays a list of books and allows you t
 - ESLint
 
 - JavaScript
-<!-- 
+
 ## Live Demo
 
-<a href="https://ishmaelkargbo.github.io/code4easy/">Code 4 Easy</a> -->
+<a href="https://ishmaelkargbo.github.io/awesome-books/">Awesome Books</a>
 
 ## Getting Started
 
