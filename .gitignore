@@ -1,7 +1,5 @@
 node_modules
-test.md
 .vscode
 package-lock.json
 yarn.lock
 package.json
-**/*DS_Store
