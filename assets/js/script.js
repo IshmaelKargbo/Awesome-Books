@@ -1,27 +1,14 @@
+import AwesomeBooks from './awsome-book.js';
+
+const awesome = new AwesomeBooks();
+
 const form = document.getElementById('form');
 const books = document.getElementById('books');
-
-function fetchBooks() {
-  const data = localStorage.getItem('awssome_books');
-  return JSON.parse(data) || [];
-}
-
-let bookStore = fetchBooks();
-
-function saveBook(book) {
-  bookStore.push(book);
-  localStorage.setItem('awssome_books', JSON.stringify(bookStore));
-}
-
-function removeBook(index) {
-  const temp = bookStore.filter((_, i) => i !== index);
-  bookStore = temp;
-}
 
 function renderBooks() {
   books.innerHTML = '';
 
-  bookStore.forEach((e, i) => {
+  awesome.shelf().forEach((e) => {
     const bookCard = document.createElement('div');
 
     const title = document.createElement('p');
@@ -36,7 +23,7 @@ function renderBooks() {
     remove.type = 'button';
     remove.innerText = 'Remove';
     remove.onclick = () => {
-      removeBook(i);
+      awesome.removeBook(e.id);
       renderBooks();
     };
     bookCard.appendChild(remove);
@@ -56,7 +43,6 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const book = Object.fromEntries(new FormData(e.target).entries());
-
-  saveBook(book);
+  awesome.addBook(book.title, book.author);
   renderBooks();
 });
