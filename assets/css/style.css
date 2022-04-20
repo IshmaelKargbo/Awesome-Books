@@ -3,6 +3,60 @@ p {
   padding: 0;
 }
 
+input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #666;
+}
+
+button {
+  background: rgb(128, 128, 122);
+  box-shadow: none;
+  border: 1px solid rgb(128, 128, 122);
+  color: white;
+  padding: 5px 10px;
+  width: 100px;
+  border-radius: 2px;
+}
+
+form {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 300px;
+}
+
 form div {
   margin-bottom: 8px;
+}
+
+.books {
+  margin: 10px;
+  border: 2px solid rgb(72, 71, 71);
+  background-color: rgb(246, 246, 246);
+}
+
+.books ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+}
+
+.books ul li {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.books ul li.draf {
+  background-color: rgb(163, 163, 163);
+}
+
+.empty {
+  text-align: center;
+  color: rgb(203, 203, 203);
+  padding: 30px;
 }
