@@ -5,29 +5,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome books</title>
+    <title>Awesome Books</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
+    <header>
+        <div>
+            <p>Awesome Books</p>
+            <nav>
+                <ul>
+                    <li>
+                        <button id="listBook">List</button>
+                    </li>
+                    <li>
+                        <button id="addBook">Add New</button>
+                    </li>
+                    <li>
+                        <button id="contactBtn">Contact</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <main>
-        <h1 class="title">All Awesome Books</h1>
-        <div class="books" id="shelf">
-            <ul id="books">
+        <p class="date" id="date"></p>
+        <div id="bookShelf">
+            <h1 class="title">All Awesome Books</h1>
+            <div class="books" id="shelf">
+                <ul id="books">
+                </ul>
+            </div>
+        </div>
+        <div id="add">
+            <h1 class="title">Add a new book</h1>
+            <form id="form">
+                <div>
+                    <input type="text" name="title" required placeholder="Title">
+                </div>
+                <div>
+                    <input type="text" name="author" required placeholder="Author">
+                </div>
+                <div>
+                    <button type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+        <div id="contact">
+            <h1 class="title">Contact Information</h1>
+            <p>Do if you have any question or youjust want to say "Hello"?</p>
+            <p>You can reach out to us!</p>
+            <ul>
+                <li>Our e-mail: ishmaelkargbo5@outlook.com</li>
+                <li>Our phone number: +23288153253</li>
+                <li>Our address: 48 Sumaila Town, Freetown</li>
             </ul>
         </div>
-        <form id="form">
-            <div>
-                <input type="text" name="title" required placeholder="Title">
-            </div>
-            <div>
-                <input type="text" name="author" required placeholder="Author">
-            </div>
-            <div>
-                <button type="submit">Add</button>
-            </div>
-        </form>
     </main>
+    <footer>
+        <div>
+            Copyright 2022 by Ishmael Kargbo
+        </div>
+    </footer>
     <script type="module" src="./assets/js/script.js"></script>
 </body>
 

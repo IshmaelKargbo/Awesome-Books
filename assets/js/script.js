@@ -5,6 +5,16 @@ const awesome = new AwesomeBooks();
 const form = document.getElementById('form');
 const books = document.getElementById('books');
 const shelf = document.getElementById('shelf');
+const date = document.getElementById('date');
+const addBook = document.getElementById('addBook');
+const contactBtn = document.getElementById('contactBtn');
+const listBook = document.getElementById('listBook');
+
+const bookShelf = document.getElementById('bookShelf');
+const contact = document.getElementById('contact');
+const add = document.getElementById('add');
+
+date.innerText = new Date().toUTCString();
 
 function renderBooks() {
   shelf.innerHTML = '';
@@ -51,5 +61,37 @@ form.addEventListener('submit', (e) => {
 
   const book = Object.fromEntries(new FormData(e.target).entries());
   awesome.addBook(book.title, book.author);
+
+  add.style.display = 'none';
+  bookShelf.style.display = 'block';
+  contact.style.display = 'none';
+
   renderBooks();
+});
+
+addBook.addEventListener('click', () => {
+  add.style.display = 'block';
+  addBook.style.color = 'blue';
+  listBook.style.color = 'black';
+  contactBtn.style.color = 'black';
+  bookShelf.style.display = 'none';
+  contact.style.display = 'none';
+});
+
+listBook.addEventListener('click', () => {
+  add.style.display = 'none';
+  addBook.style.color = 'black';
+  listBook.style.color = 'blue';
+  contactBtn.style.color = 'black';
+  bookShelf.style.display = 'block';
+  contact.style.display = 'none';
+});
+
+contactBtn.addEventListener('click', () => {
+  add.style.display = 'none';
+  addBook.style.color = 'black';
+  listBook.style.color = 'black';
+  contactBtn.style.color = 'blue';
+  bookShelf.style.display = 'none';
+  contact.style.display = 'block';
 });
